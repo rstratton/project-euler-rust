@@ -1,0 +1,37 @@
+[package]
+name = "project-euler-rust"
+version = "0.1.0"
+authors = ["Robert Stratton <r.a.stratton88@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+[[bin]]
+name = "s001"
+path = "src/s001.rs"
+
+[[bin]]
+name = "s002"
+path = "src/s002.rs"
+
+[[bin]]
+name = "s003"
+path = "src/s003.rs"
+
+[[bin]]
+name = "s004"
+path = "src/s004.rs"
+
+[[bin]]
+name = "s005"
+path = "src/s005.rs"
+
+[[bin]]
+name = "s006"
+path = "src/s006.rs"
+
+[[bin]]
+name = "s007"
+path = "src/s007.rs"
