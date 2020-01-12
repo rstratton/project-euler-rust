@@ -1,12 +1,17 @@
 [package]
 name = "project-euler-rust"
 version = "0.1.0"
-authors = ["Robert Stratton <r.a.stratton88@gmail.com>"]
+authors = ["Robert Stratton"]
 edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+num-bigint = "0.2"
+
+[lib]
+name = "primes"
+path = "lib/primes.rs"
 
 [[bin]]
 name = "s001"
@@ -39,3 +44,11 @@ path = "src/s007.rs"
 [[bin]]
 name = "s008"
 path = "src/s008.rs"
+
+[[bin]]
+name = "s009"
+path = "src/s009.rs"
+
+[[bin]]
+name = "s010"
+path = "src/s010.rs"
