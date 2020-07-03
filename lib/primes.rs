@@ -1,5 +1,6 @@
 use std::cmp::Ordering;
 use std::collections::BinaryHeap;
+use std::collections::HashSet;
 
 pub type Int = u64;
 
@@ -82,3 +83,18 @@ impl Iterator for Sieve {
         Some(prime)
     }
 }
+
+// New impl should enable:
+// - Iterator over primes
+//   - Should cache results so that future iterators don't redo work
+//   - Re-using previous results should be seamless for iterator users (i.e. iterate 'til end of cached, then start discovering new primes)
+//   - Might make sense to have a private iterator that we use for expanding the frontier of primes which the public iterator uses when it's beyond the cached results
+
+struct PrimeNumbers {
+    // This list of primes should grow over time, and should
+    // be a source of prime caching for iteration purposes
+    primes_list: Vec<Int>
+}
+
+// I feel like I want some sort of singleton pattern here, how do I go about that?
+// Sounds like singletons are difficult and discouraged in Rust
